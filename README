@@ -1,0 +1,46 @@
+README cartoon
+
+OVERVIEW: Cartoon is the Top-Level Class for this project. It is in charge of
+instantiating all higher object classes, as well as changing various universal
+mechanics, such as the time of day and the sky's color depending on the time of day.
+The program consists of 2 main panes along with a root, created by the PaneOrganizer class.
+The background pane contains three important layers. The sky, city, and train. The
+sky is a separate Class that instantiates and controls moon objects. Moon objects
+include the moon, stars, and sun. Using trigonometry and several methods,
+these celestial objects rotate. This is done through an event handler and lambda
+expression in cartoon and sky that change the variable time based on arrow-key
+presses. City is another object class. It generates random buildings in several layers.
+Some have windows. Through a fancy javaFX method, interpolation, the buildings change
+based on the time variable. Farther buildings change colors in accordance with
+the day's time. The train is the final layer of the borderpane, and it includes
+a station and a train that moves across the screen automatically every few seconds.
+This happens using a timeline in the Mover class. Each train is composed of train wagons
+from the train wagon class. There is also a button pane at the bottom that has
+a quit button, and several labels, one of which changes.
+
+PERSONAL CONNECTION: I'm from Chicago so I really wanted to recreate the feeling
+of an urban environment, especially with moving trains. The city is beautiful at
+every part of the day, so I wanted that to be shown.
+
+SRC: By making each color high contrast, I increase the accessibility of the project.
+The background sky creates an intense contrast with the rest of the scene no
+matter the time of the day, and the moon/sun is nice and large.
+Furthermore, I attempted to increase this area of SRC by scaling each label from
+its default size. Because it is now larger, it should be easier to read
+and comprehend.
+
+DESIGN CHOICES: This cartoon implements several unique features in attempt to create the feel
+of a lively and expansive city. By using random generation, the City class generates
+random buildings with random properties. All rectangles in this program are created
+using the MyRectangle class, which allows for greater control over the JavaFX rectangles.
+The city is also meant to invoke the feeling of depth. Therefore it is composed of 3 rows,
+each (except the front one) also has three more rows. The rose get darker the farther away,
+the last row doesn't have windows. This successfully captures the feeling of depth.
+It took me a very long time to figure out how to change the colors of the buildings
+in accordance with time. For a while I attempted using the brighter and darker methods
+that come with javaFX, but after researching I discovered interpolation which did wonders.
+
+KNOWN BUGS: None
+
+How many hours did you spend on this assignment?
+Answer: 30
